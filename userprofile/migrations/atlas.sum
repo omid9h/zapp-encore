@@ -1,0 +1,4 @@
+h1:SRMFCXoUeSqYLyx6glyruVsJTj25eQ7zn1MdztyX4nI=
+20240210150322_add_uuid_extension.up.sql h1:6F1sJTmxtTnfxR4XG/qSMkgze1hFfFBQDTwj+tD/esM=
+20240210150336_create_userprofile_table.down.sql h1:2oRCetNyR7ylu4Q+15rt57QUlbKtfr+FTDNkKF9fPP0=
+20240210150336_create_userprofile_table.up.sql h1:g8WYpEd7nA75NmM0fv86U6pgZpIAfJx0io4Q38r7uvU=
