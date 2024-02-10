@@ -1,6 +1,10 @@
 package userprofile
 
-import "context"
+import (
+	"context"
+
+	"encore.app/pkg/errorhandler"
+)
 
 type RegisterRequest struct {
 	UserID string `json:"user_id"`
@@ -20,5 +24,6 @@ func (s *Service) Register(ctx context.Context, params RegisterRequest) (Registe
 		Email:  params.Email,
 	}
 	err := s.db.Create(&user).Error
+	err = errorhandler.HandleDBError(err)
 	return RegisterResponse{UserProfile: user}, err
 }
