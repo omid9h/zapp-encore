@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"encore.app/pkg/errorhandler"
+	"encore.app/pkg/errorhandler/queryhelper"
 )
 
 type ListProfilesRequest struct {
@@ -32,7 +33,8 @@ func (s *Service) ListProfiles(ctx context.Context, params ListProfilesRequest) 
 		IsDeleted: params.IsDeleted,
 	}
 	query := s.db.Where(&user)
-	err := query.Where("created_at BETWEEN ? AND ?", params.CreatedAtFrom, params.CreatedAtTo).Find(&users).Error
+	query = queryhelper.ApplyRangeFilter(query, "created_at", params.CreatedAtFrom, params.CreatedAtTo)
+	err := query.Find(&users).Error
 	err = errorhandler.HandleDBError(err)
 	return ListProfilesResponse{UserProfiles: users}, err
 }
