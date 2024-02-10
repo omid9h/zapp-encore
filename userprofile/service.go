@@ -15,8 +15,7 @@ var userprofileDB = sqldb.NewDatabase("userprofile", sqldb.DatabaseConfig{
 	Migrations: "./migrations",
 })
 
-// initService initializes the site service.
-// It is automatically called by Encore on service startup.
+//lint:ignore U1000 encore spec
 func initService() (*Service, error) {
 	db, err := gorm.Open(postgres.New(postgres.Config{
 		Conn: userprofileDB.Stdlib(),
