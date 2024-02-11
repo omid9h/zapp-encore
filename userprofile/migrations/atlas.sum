@@ -1,6 +1,8 @@
-h1:L3jntPUZeSsJm62oB1b6SQWE1yitquD9+5uS73GdP/o=
+h1:eVH5ibE3kZ6liatmAWvJI/4RP7KWrKHgyCs6FZu6frM=
 20240210172801_add_extensions.up.sql h1:+jSdBMU3Ugz6FSCvqtrX0o9AjT+xKLGuQS2yoI/bkjY=
 20240210172904_create_userprofile.down.sql h1:caAleUXitBHoNJ2P7ArYBB/k7Ez9+jDmwv2O6zs45Ak=
 20240210172904_create_userprofile.up.sql h1:6HRj9U8CZGgIR8DNp71FeftadvYWgZC8Vhvie4SbqEY=
 20240210180908_make_email_unique.down.sql h1:b06ScWeIgFWY5CXxgjYnVaCw4khtetrJBg6W+bKAUks=
 20240210180908_make_email_unique.up.sql h1:45R35URdnKT23sKaVC8BVdLX+iikOQdx5CLMDF0TLv0=
+20240210223401_add_fullname.down.sql h1:mOfXYxpHYTlHssVKLU235VDhiQ1CdjPBn2IX5KElWQ8=
+20240210223401_add_fullname.up.sql h1:6fy/+z9N8ClN/rMQ6Lz6v9BD1WNI/t1aYffkR/eHKno=

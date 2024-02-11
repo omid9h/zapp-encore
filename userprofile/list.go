@@ -5,13 +5,14 @@ import (
 	"time"
 
 	"encore.app/pkg/errorhandler"
-	"encore.app/pkg/errorhandler/queryhelper"
+	"encore.app/pkg/queryhelper"
 )
 
 type ListProfilesRequest struct {
 	ID            string    `json:"id"`
 	UserID        string    `json:"user_id"`
 	Email         string    `json:"email"`
+	FullName      string    `json:"full_name"`
 	IsDeleted     bool      `json:"is_deleted"`
 	CreatedAtFrom time.Time `json:"created_at_from"`
 	CreatedAtTo   time.Time `json:"created_at_to"`
@@ -30,6 +31,7 @@ func (s *Service) ListProfiles(ctx context.Context, params ListProfilesRequest) 
 		ID:        params.ID,
 		UserID:    params.UserID,
 		Email:     params.Email,
+		FullName:  params.FullName,
 		IsDeleted: params.IsDeleted,
 	}
 	query := s.db.Where(&user)
